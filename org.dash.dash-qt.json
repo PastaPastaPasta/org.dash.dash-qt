@@ -32,7 +32,7 @@
                         "x86_64"
                     ],
                     "url": "https://github.com/dashpay/dash/releases/download/v20.1.0/dashcore-20.1.0-x86_64-linux-gnu.tar.gz",
-                    "sha256": "8c5432fa9cb3f3e686ca69d3a3b5166d8cb4188a4d4041546d42a494fb7e015e",
+                    "sha256": "8c5432fa9cb3f3e686ca69d3a3b5166d8cb4188a4d4041546d42a494fb7e015e"
                 },
                 {
                     "type": "archive",
@@ -40,7 +40,7 @@
                         "aarch64"
                     ],
                     "url": "https://github.com/dashpay/dash/releases/download/v20.1.0/dashcore-20.1.0-aarch64-linux-gnu.tar.gz",
-                    "sha256": "0f7b07d2766308cd09ed9f8d746593123fe68dd4b213ec6353dbe7ae5f846d9b",
+                    "sha256": "0f7b07d2766308cd09ed9f8d746593123fe68dd4b213ec6353dbe7ae5f846d9b"
                 }
             ]
         },
