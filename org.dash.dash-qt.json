@@ -1,0 +1,79 @@
+{
+    "id": "org.dash.dash-qt",
+    "runtime": "org.freedesktop.Platform",
+    "sdk": "org.freedesktop.Sdk",
+    "runtime-version": "23.08",
+    "command": "dash-qt",
+    "finish-args": [
+        "--socket=x11",
+        "--socket=pulseaudio",
+        "--device=dri",
+        "--share=ipc",
+        "--share=network",
+        "--filesystem=/run/tor/control.authcookie:ro"
+    ],
+    "modules": [
+        {
+            "name": "dash-core",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -m 0744 -D -t /app/bin/internal bin/dashd",
+                "install -m 0744 -D -t /app/bin/internal bin/dash-qt",
+                "install -m 0744 -D -t /app/bin/internal bin/dash-cli",
+                "install -m 0744 -D -t /app/bin/internal bin/test_dash"
+            ],
+            "post-install": [
+                "/app/bin/internal/test_dash"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "only-arches": [
+                        "x86_64"
+                    ],
+                    "url": "https://github.com/dashpay/dash/releases/download/v20.1.0/dashcore-20.1.0-x86_64-linux-gnu.tar.gz",
+                    "sha256": "8c5432fa9cb3f3e686ca69d3a3b5166d8cb4188a4d4041546d42a494fb7e015e",
+                },
+                {
+                    "type": "archive",
+                    "only-arches": [
+                        "aarch64"
+                    ],
+                    "url": "https://github.com/dashpay/dash/releases/download/v20.1.0/dashcore-20.1.0-aarch64-linux-gnu.tar.gz",
+                    "sha256": "0f7b07d2766308cd09ed9f8d746593123fe68dd4b213ec6353dbe7ae5f846d9b",
+                }
+            ]
+        },
+        {
+            "name": "misc",
+            "buildsystem": "simple",
+            "build-commands": [
+                "desktop-file-edit --set-key=\"Icon\" --set-value=${FLATPAK_ID} dash-qt.desktop",
+                "install -Dp -m 644 dash-qt.desktop /app/share/applications/${FLATPAK_ID}.desktop",
+                "install -Dp -m 644 dash.svg /app/share/icons/hicolor/scalable/apps/org.dash.dash-qt.svg",
+                "install -Dp -m 644 org.dash.dash-qt.metainfo.xml /app/share/metainfo/org.dash.dash-qt.metainfo.xml",
+                "bash install_wrappers.sh"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://raw.githubusercontent.com/dashpay/dash/v20.1.0/contrib/debian/dash-qt.desktop",
+                    "sha256": "59b6125eb0732137026d33e1e61dc8b84e20f90baba176cc84899c41cf8201df"
+                },
+                {
+                    "type": "file",
+                    "path": "org.dash.dash-qt.metainfo.xml"
+                },
+                {
+                    "type": "file", 
+                    "url": "https://raw.githubusercontent.com/dashpay/dash/v20.1.0/src/qt/res/icons/dash.png",
+                    "sha256": "d72bc417ed8ea88fc9eb1f32c9fe1cd58e2715ab1f75ad94d1fe6acde2af4dd9"
+                },
+                {
+                    "type": "file",
+                    "path": "install_wrappers.sh"
+                }
+            ]
+        }
+    ]
+}
