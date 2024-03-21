@@ -10,6 +10,7 @@
         "--device=dri",
         "--share=ipc",
         "--share=network",
+        "--filesystem=~/.dashcore:rw",
         "--filesystem=/run/tor/control.authcookie:ro"
     ],
     "modules": [
