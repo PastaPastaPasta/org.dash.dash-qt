@@ -11,6 +11,7 @@
         "--share=ipc",
         "--share=network",
         "--filesystem=~/.dashcore:rw",
+        "--filesystem=home",
         "--filesystem=/run/tor/control.authcookie:ro"
     ],
     "modules": [
