@@ -17,7 +17,7 @@
             "name": "dash-core",
             "buildsystem": "simple",
             "build-commands": [
-                "install -Dm755 dash-entrypoint.sh /app/bin/dash-entrypoint.sh",
+                "install -m 0744 -D -t /app/bin/internal dash-entrypoint.sh",
                 "install -m 0744 -D -t /app/bin/internal bin/dashd",
                 "install -m 0744 -D -t /app/bin/internal bin/dash-qt",
                 "install -m 0744 -D -t /app/bin/internal bin/dash-cli",
@@ -64,6 +64,10 @@
                 {
                     "type": "file",
                     "path": "org.dash.dash-qt.metainfo.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "dash-entrypoint.sh"
                 },
                 {
                     "type": "file", 
