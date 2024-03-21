@@ -3,7 +3,7 @@
     "runtime": "org.freedesktop.Platform",
     "sdk": "org.freedesktop.Sdk",
     "runtime-version": "23.08",
-    "command": "dash-qt",
+    "command": "dash-entrypoint.sh",
     "finish-args": [
         "--socket=x11",
         "--socket=pulseaudio",
@@ -17,6 +17,7 @@
             "name": "dash-core",
             "buildsystem": "simple",
             "build-commands": [
+                "install -m 0744 -D -t /app/bin/internal dash-entrypoint.sh",
                 "install -m 0744 -D -t /app/bin/internal bin/dashd",
                 "install -m 0744 -D -t /app/bin/internal bin/dash-qt",
                 "install -m 0744 -D -t /app/bin/internal bin/dash-cli",
