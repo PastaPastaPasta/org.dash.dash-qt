@@ -17,7 +17,6 @@
             "name": "dash-core",
             "buildsystem": "simple",
             "build-commands": [
-                "install -m 0744 -D -t /app/bin/internal dash-entrypoint.sh",
                 "install -m 0744 -D -t /app/bin/internal bin/dashd",
                 "install -m 0744 -D -t /app/bin/internal bin/dash-qt",
                 "install -m 0744 -D -t /app/bin/internal bin/dash-cli",
@@ -53,6 +52,7 @@
                 "install -Dp -m 644 dash-qt.desktop /app/share/applications/${FLATPAK_ID}.desktop",
                 "install -Dp -m 644 dash.png /app/share/icons/hicolor/scalable/apps/org.dash.dash-qt.png",
                 "install -Dp -m 644 org.dash.dash-qt.metainfo.xml /app/share/metainfo/org.dash.dash-qt.metainfo.xml",
+                "install -m 0744 -D -t /app/bin/internal dash-entrypoint.sh",
                 "bash install_wrappers.sh"
             ],
             "sources": [
