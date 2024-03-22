@@ -65,7 +65,7 @@
                 },
                 {
                     "type": "file",
-                    "path": "org.dash.dash-qt.metainfo.xml"
+                    "path": "org.dash.dash-core.metainfo.xml"
                 },
                 {
                     "type": "file",
