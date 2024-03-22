@@ -54,7 +54,7 @@
                 "desktop-file-edit --set-key=\"Icon\" --set-value=${FLATPAK_ID} dash-qt.desktop",
                 "install -Dp -m 644 dash-qt.desktop /app/share/applications/${FLATPAK_ID}.desktop",
                 "install -Dp -m 644 dash.png /app/share/icons/hicolor/scalable/apps/org.dash.dash-qt.png",
-                "install -Dp -m 644 org.dash.dash-qt.metainfo.xml /app/share/metainfo/org.dash.dash-qt.metainfo.xml",
+                "install -Dp -m 644 org.dash.dash-core.metainfo.xml /app/share/metainfo/org.dash.dash-core.metainfo.xml",
                 "install -m 0744 -D dash-entrypoint.sh /app/bin/dash-entrypoint.sh"
             ],
             "sources": [
