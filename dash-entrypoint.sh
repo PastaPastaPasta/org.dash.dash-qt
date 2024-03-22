@@ -4,7 +4,7 @@
 cmd="dash-qt"
 
 # If the first argument is one of the specific commands, use it instead
-if [[ "$1" == "dashd" || "$1" == "dash-cli" ]]; then
+if [[ "$1" == "dashd" || "$1" == "dash-cli" || "$1" == "dash-tx" || "$1" == "dash-wallet" ]]; then
   cmd="$1"
   # Remove the command from the arguments list
   shift
