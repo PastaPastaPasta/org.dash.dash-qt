@@ -75,6 +75,10 @@
                     "type": "file", 
                     "url": "https://raw.githubusercontent.com/dashpay/dash/v20.1.0/src/qt/res/icons/dash.png",
                     "sha256": "d72bc417ed8ea88fc9eb1f32c9fe1cd58e2715ab1f75ad94d1fe6acde2af4dd9"
+                },
+                {
+                    "type": "file",
+                    "path": "install_wrappers.sh"
                 }
             ]
         }
