@@ -1,5 +1,5 @@
 {
-    "id": "org.dash.dash-qt",
+    "id": "org.dash.dash-core",
     "runtime": "org.freedesktop.Platform",
     "sdk": "org.freedesktop.Sdk",
     "runtime-version": "23.08",
@@ -21,6 +21,8 @@
                 "install -m 0744 -D -t /app/bin/internal bin/dashd",
                 "install -m 0744 -D -t /app/bin/internal bin/dash-qt",
                 "install -m 0744 -D -t /app/bin/internal bin/dash-cli",
+                "install -m 0744 -D -t /app/bin/internal bin/dash-tx",
+                "install -m 0744 -D -t /app/bin/internal bin/dash-wallet",
                 "install -m 0744 -D -t /app/bin/internal bin/test_dash"
             ],
             "post-install": [
@@ -53,8 +55,7 @@
                 "install -Dp -m 644 dash-qt.desktop /app/share/applications/${FLATPAK_ID}.desktop",
                 "install -Dp -m 644 dash.png /app/share/icons/hicolor/scalable/apps/org.dash.dash-qt.png",
                 "install -Dp -m 644 org.dash.dash-qt.metainfo.xml /app/share/metainfo/org.dash.dash-qt.metainfo.xml",
-                "install -m 0744 -D dash-entrypoint.sh /app/bin/dash-entrypoint.sh",
-                "bash install_wrappers.sh"
+                "install -m 0744 -D dash-entrypoint.sh /app/bin/dash-entrypoint.sh"
             ],
             "sources": [
                 {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>org.dash.dash-qt</id>
+  <id>org.dash.dash-core</id>
   <name>Dash Core</name>
   <project_license>MIT</project_license>
   <metadata_license>CC0-1.0</metadata_license>
@@ -14,7 +14,7 @@
     https://github.com/dashpay/dash/issues/new?title=[flatpak]
   </url>
   <launchable type="desktop-id">
-    org.dash.dash-qt.desktop
+    org.dash.dash-core.desktop
   </launchable>
   <description>
     <p>
@@ -26,17 +26,16 @@
   <screenshots>
     <screenshot type="default">
       <image type="source">
-        https://user-images.githubusercontent.com/6399679/62743657-2fc28b80-ba11-11e9-9bbf-d3ad0d17abb0.png
+        https://docs.dash.org/en/stable/_images/overview.png
       </image>
     </screenshot>
   </screenshots>
   <releases>
-    <release date="2023-12-06" version="21.0.0"/>
+    <release date="2024-03-05" version="20.1.0"/>
   </releases>
   <content_rating type="oars-1.1"/>
-  <developer_name>Dash Core</developer_name>
+  <developer_name>Dash Core Group</developer_name>
   <developer id="org.dash">
-    <name>Dash Core</name>
+    <name>Dash Core Group</name>
   </developer>
-
 </component>
